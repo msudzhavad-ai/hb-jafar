@@ -7,116 +7,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Neucha&display=swap" rel="stylesheet">
-
-<script>
-/* =====================================================================
-   НАСТРОЙКИ СТРАНИЦЫ — меняйте только этот блок.
-   Текст пишите между кавычками "...". Ссылки — полностью, с https://
-   Картинки: вставьте ссылку на своё фото (например, загруженное на
-   imgbb.com, Яндекс Диск с прямой ссылкой и т.п.) или имя файла,
-   который лежит в той же папке, что и этот index.html (например "foto1.jpg").
-   Если оставить пустые кавычки "" — будет показана заглушка.
-   Чтобы спрятать целый раздел — поставьте show: false.
-   ===================================================================== */
-const CONFIG = {
-
-  // ---- Цвета (можно взять любой цвет в формате #RRGGBB) ----
-  colors: {
-    background: "#f6f0e5",   // фон страницы (кремовый)
-    accent:     "#a31c2d",   // заголовки, рамки, кнопки (бордовый)
-    text:       "#3b3a36",   // обычный текст
-    blue:       "#5b90ad",   // клетка на фоне блоков «Место» и «Пока-пока»
-    blueLight:  "#b1cdd9",   // светлая рамка вокруг этих блоков
-    star:       "#f6bb09"    // звёздочки
-  },
-
-  // ---- Шапка ----
-  header: {
-    show: true,
-    line1: "Джафару",     // первая строка (в оригинале: «Мирону») — ВАШЕ ИМЯ в дательном падеже
-    line2: "1",              // сколько исполняется
-    line3: "год",            // «год» / «года» / «лет»
-    bubble: "урааа!"         // надпись в облачке
-  },
-
-  // ---- Блок «дата рождения» в рамке ----
-  intro: {
-    show: true,
-    title: "21 ноября",
-    subtitle: "В нашей замечательной семье родился Джафар",
-    text: "Вот уже целый год этот любитель спагетти, штор, маминых волос и папиных носков наполняет нашу жизнь смехом, нежностью и бесконечной любовью."
-  },
-
-  // ---- Блок «Поэтому» + календарь ----
-  invite: {
-    show: true,
-    title: "Поэтому",
-    text: [
-      "Мы с огромной радостью приглашаем вас разделить с нами особенный день — первый день рождения нашего сына!"
-    ],
-    date: "2026-11-21"       // ДАТА ПРАЗДНИКА в формате ГГГГ-ММ-ДД (календарь построится сам)
-  },
-
-  // ---- Блок «Место встречи» (на голубой клетке) ----
-  place: {
-    show: true,
-    themeLabel: "вечеринка в стиле",
-    theme: "цирк",
-    placeLabel: "место встречи:",
-    placeName: "LOFT MONBINI",            // например «LOFT»
-    address: "пр-кт Лихачева, д.20",
-    mapButton: "открыть карту",
-    mapUrl: "https://yandex.ru/maps/org/29893557636",      // ссылка на место в Яндекс/Google Картах
-    timeLabel: "сбор гостей в",
-    time: "16.00"
-  },
-
-  // ---- Дресс-код + листалка с образами ----
-  dresscode: {
-    show: true,
-    text: "Достаём из гардероба всё самое цветное, весёлое и праздничное и отправляемся прямиком на цирковое представление",
-    slideSeconds: 3,                        // через сколько секунд листать картинки
-    images: ["", "", "", "", ""]            // ссылки на картинки-образы (формат 2:3, вертикальные)
-  },
-
-  // ---- Подарки / вишлист ----
-  gifts: {
-    show: true,
-    question: "ну, естественно, что дарить?",
-    title: "подарки",
-    text: [
-      "чтобы немного облегчить вам муки выбора, мы собрали вишлист Джафара с подарками, он точно будет рад",
-      "вы можете выбрать что-нибудь из списка и забронировать подарок, чтобы он не повторился"
-    ],
-    button: "Вишлист",
-    url: "https://ohmywishes.com/users/jafar"     // ссылка на ваш вишлист
-  },
-
-  // ---- «И самое милое» + фото по месяцам ----
-  growth: {
-    show: true,
-    title: "и самое милое",
-    text: [
-      "посмотрите как Джафар вырос и менялся весь этот год!",
-      "смотрите внимательно ведь он очень старался))"
-    ],
-    slideSeconds: 3,
-    photos: [                               // добавляйте сколько угодно: { photo: "ссылка", caption: "подпись" }
-      { photo: "", caption: "1 месяц" },
-      { photo: "", caption: "2 месяца" },
-      { photo: "", caption: "3 месяца" }
-    ]
-  },
-
-  // ---- Финал ----
-  bye: {
-    show: true,
-    title: "пока-пока",
-    signature: "ваши Джафар"
-  }
-};
-</script>
-
 <style>
   :root{
     --bg:#f6f0e5; --accent:#a31c2d; --text:#3b3a36; --blue:#5b90ad; --blue-l:#b1cdd9; --star:#f6bb09;
@@ -147,9 +37,9 @@ const CONFIG = {
   .bubble{position:absolute;left:40%;top:400px;background:#fff;border:2px solid var(--text);border-radius:50%;
           padding:6px 14px;font-size:18px;transform:rotate(-4deg)}
   .stripes{height:46px;margin-top:40px;
-     background:linear-gradient(to bottom,transparent 0 6px,var(--accent) 6px 12px,var(--bg) 12px 15px,
-       var(--star) 15px 21px,var(--bg) 21px 24px,var(--green) 24px 30px,var(--bg) 30px 33px,var(--orange) 33px 39px,transparent 39px);
-     transform:skewY(-2deg)}
+   background:linear-gradient(to bottom,transparent 0 6px,var(--accent) 6px 12px,var(--bg) 12px 15px,
+     var(--star) 15px 21px,var(--bg) 21px 24px,var(--green) 24px 30px,var(--bg) 30px 33px,var(--orange) 33px 39px,transparent 39px);
+   transform:skewY(-2deg)}
 
   /* рамка-билет */
   .frame{position:relative;border:7px solid var(--accent);border-radius:34px 30px 38px 28px/30px 36px 28px 34px;
@@ -216,167 +106,221 @@ const CONFIG = {
 </style>
 </head>
 <body>
-<div class="page" id="page"></div>
+<div class="page">
 
-<script>
-/* ======== Ниже — код, который строит страницу. Менять не нужно. ======== */
-(function(){
-  const C = CONFIG, r = document.documentElement.style;
-  r.setProperty('--bg',C.colors.background); r.setProperty('--accent',C.colors.accent);
-  r.setProperty('--text',C.colors.text); r.setProperty('--blue',C.colors.blue);
-  r.setProperty('--blue-l',C.colors.blueLight); r.setProperty('--star',C.colors.star);
-
-  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  const paras = arr => (Array.isArray(arr)?arr:[arr]).map(p=>`<p class="t">${esc(p)}</p>`).join('');
-  const img = (src, label, cls='') => src ? `<img class="${cls}" src="${esc(src)}" alt="">`
-                                          : `<div class="ph ${cls}">${esc(label)}</div>`;
-  const star = (style) => `<i class="star" style="${style}"></i>`;
-
-  // флажки-гирлянда (SVG)
-  function bunting(){
-    const fills=['url(#dots)','#2f5e9e','url(#str)','url(#dots2)','#a31c2d','url(#str2)','#2f5e9e'];
-    let tri='';
-    for(let i=0;i<7;i++){
-      const x=i*80, y=10+Math.sin(i/6*Math.PI)*22;
-      tri+=`<path d="M${x+4} ${y} L${x+76} ${y+4} L${x+42} ${y+78} Z" fill="${fills[i]}"/>`;
-    }
-    return `<svg class="bunting" viewBox="0 0 560 110" xmlns="http://www.w3.org/2000/svg">
+  <!-- ===== ШАПКА ===== -->
+  <section class="hero fade" style="padding:0">
+    <svg class="bunting" viewBox="0 0 560 110" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#f6a011"/><circle cx="8" cy="8" r="3.5" fill="#2f5e9e"/></pattern>
         <pattern id="dots2" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#2f5e9e"/><circle cx="8" cy="8" r="3.5" fill="#f6bb09"/></pattern>
         <pattern id="str" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="12" height="12" fill="#e2412a"/><rect width="5" height="12" fill="#f6a011"/></pattern>
         <pattern id="str2" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)"><rect width="12" height="12" fill="#f6a011"/><rect width="5" height="12" fill="#e2412a"/></pattern>
       </defs>
-      <path d="M0 8 Q280 60 560 8" stroke="#3b3a36" stroke-width="2" fill="none"/>${tri}</svg>`;
-  }
+      <path d="M0 8 Q280 60 560 8" stroke="#3b3a36" stroke-width="2" fill="none"/>
+      <path d="M4 10 L76 14 L42 88 Z" fill="url(#dots)"/>
+      <path d="M84 16 L156 20 L122 94 Z" fill="#2f5e9e"/>
+      <path d="M164 22 L236 26 L202 100 Z" fill="url(#str)"/>
+      <path d="M244 28 L316 32 L282 106 Z" fill="url(#dots2)"/>
+      <path d="M324 32 L396 36 L362 110 Z" fill="#a31c2d"/>
+      <path d="M404 32 L476 36 L442 110 Z" fill="url(#str2)"/>
+      <path d="M484 28 L556 32 L522 106 Z" fill="#2f5e9e"/>
+    </svg>
 
-  // календарь на неделю с датой праздника
-  function calendar(iso){
-    const d = new Date(iso+'T12:00:00');
-    const dow = (d.getDay()+6)%7;  // 0 = понедельник
-    const names=['пн','вт','ср','чт','пт','сб','вс'];
-    let days='';
-    for(let i=0;i<7;i++){
-      const x=new Date(d); x.setDate(d.getDate()-dow+i);
-      days+=`<div class="cal-day ${i===dow?'on':''}"><span>${x.getDate()}</span></div>`;
-    }
-    const dd=String(d.getDate()).padStart(2,'0'), mm=String(d.getMonth()+1).padStart(2,'0');
-    return `<div class="date-big">${dd}.${mm}.${d.getFullYear()}</div>
-      <div class="cal"><div class="cal-row">${names.map(n=>`<div>${n.toUpperCase()}</div>`).join('')}</div>
-      <div class="cal-line"></div><div class="cal-row">${days}</div></div>`;
-  }
+    <div class="h h1 fit">Джафару</div>
+    <div class="h age">1</div>
+    <div class="h h3">год</div>
 
-  function slider(items, seconds, cls){
-    const id='s'+Math.random().toString(36).slice(2,7);
-    setTimeout(()=>{
-      const el=document.getElementById(id); if(!el||items.length<2) return; let i=0;
-      setInterval(()=>{ i=(i+1)%items.length; el.style.transform=`translateX(-${i*100}%)`; }, seconds*1000);
-    },0);
-    return `<div class="slider ${cls}"><div class="slides" id="${id}">${items.join('')}</div></div>`;
-  }
+    <span class="deco emoji" style="left:4%;top:170px"><img style="height:200px;" src="images/monkey.png" alt=""></span>
+    <span class="deco emoji" style="right:5%;top:160px"><img style="height:200px;" src="images/lion.png" alt=""></span>
+    <span class="deco emoji" style="left:5%;top:380px"><img style="height:200px;" src="images/horse.png" alt=""></span>
+    <span class="deco emoji" style="right:6%;top:350px"><img style="height:200px;" src="images/bear.png" alt=""></span>
+    <span class="deco emoji" style="right:25%;top:400px"><img style="height:200px;" src="images/uraa.png" alt=""></span>
 
-  let h='';
-  if(C.header.show) h+=`
-  <section class="hero fade" style="padding:0">
-    ${bunting()}
-    <div class="h h1 fit" style="z-index:10px;">${esc(C.header.line1)}</div>
-    <div class="h age" style="z-index:10px;">${esc(C.header.line2)}</div>
-    <div class="h h3" style="z-index:10px;">${esc(C.header.line3)}</div>
-    <span class="deco emoji" style="left:4%;top:170px"><image style="height: 200px;" src="https://downloader.disk.yandex.ru/preview/b2d4b06cc3255468950beefd4c9b11b3c9126a15960638f76f329b2850c40df8/6ae91b94/62nKFisENKXv4xHdS8vD2L9qVKH_cIkMBYufoFjyDG7o1Qg2nZinhhE94fv_PrQBxBR7gP1QaY6YsFnKwCBYQQ%3D%3D?uid=0&filename=01122023_дамбо%20%2828%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v3&is_direct_zip_experiment=1&size=2048x2048" alt="" /></span>
-    <span class="deco emoji" style="right:5%;top:160px"><image style="height: 200px;" src="https://downloader.disk.yandex.ru/preview/6ab7b490f1135a2950e57853cae12c1160d06c6b16c722d5fdc9351cf48a4f50/6ae91bed/ZMFjCJEBpbRnggbylj7e_FgqxnK9VaMBlKQoV25KvC6PHodYrx0Y_WefmH-9b7jL686pz428FS_Z2lsMTM_c0A%3D%3D?uid=0&filename=23_04_2021_слоник%20%28158%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v3&is_direct_zip_experiment=1&size=2048x2048" alt="" /></span>
-    <span class="deco emoji" style="left:5%;top:380px"><image style="height: 200px;" src="https://png.pngtree.com/png-clipart/20240715/original/pngtree-cute-animal-friends-in-circus-tent-png-image_15561012.png" alt="" /></span>
-    <span class="deco emoji" style="right:6%;top:350px"><image style="height: 200px;" src="https://i.pinimg.com/originals/ca/40/cd/ca40cd25731c2562b13f729922972333.png" alt="" /></span>
-    <span class="deco emoji" style="left:42%;top:445px;font-size:50px"><image style="height: 200px;" src="https://downloader.disk.yandex.ru/preview/b2d4b06cc3255468950beefd4c9b11b3c9126a15960638f76f329b2850c40df8/6ae91b94/62nKFisENKXv4xHdS8vD2L9qVKH_cIkMBYufoFjyDG7o1Qg2nZinhhE94fv_PrQBxBR7gP1QaY6YsFnKwCBYQQ%3D%3D?uid=0&filename=01122023_дамбо%20%2828%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v3&is_direct_zip_experiment=1&size=2048x2048" alt="" /></span>
-    <span class="deco emoji" style="left:9%;top:440px;font-size:44px"><image style="height: 200px;"style="height: 250px;" src="https://downloader.disk.yandex.ru/preview/b2d4b06cc3255468950beefd4c9b11b3c9126a15960638f76f329b2850c40df8/6ae91b94/62nKFisENKXv4xHdS8vD2L9qVKH_cIkMBYufoFjyDG7o1Qg2nZinhhE94fv_PrQBxBR7gP1QaY6YsFnKwCBYQQ%3D%3D?uid=0&filename=01122023_дамбо%20%2828%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v3&is_direct_zip_experiment=1&size=2048x2048" alt="" /></span>
-    <span class="bubble">${esc(C.header.bubble)}</span>
-    <div style="height:120px"></div><div class="stripes"></div>
-  </section>`;
+    <div style="height:120px"></div>
+    <div><img style="width: 100%; height: 100px;" src="images/ribbon.png" alt="" /></div>
+  </section>
 
-  if(C.intro.show) h+=`
+  <!-- ===== ДАТА РОЖДЕНИЯ ===== -->
   <section class="fade">
     <div class="frame">
       <div class="emoji" style="text-align:center;font-size:40px">🎪</div>
-      <div class="h">${esc(C.intro.title)}</div>
-      ${paras(C.intro.subtitle)}${paras(C.intro.text)}
-      <div class="emoji" style="display:flex;justify-content:space-around;font-size:58px;margin-top:10px"><span>🐒🎈</span><span>🐊</span></div>
+      <div class="h">21 ноября</div>
+      <p class="t">В нашей замечательной семье родился Джафар</p>
+      <p class="t">Вот уже целый год этот любитель спагетти, штор, маминых волос и папиных носков наполняет нашу жизнь смехом, нежностью и бесконечной любовью.</p>
+      <div class="emoji" style="display:flex;justify-content:space-around;font-size:58px;margin-top:10px"><img style="height: 250px;" src="images/cheburashka.png" alt="" /></div>
     </div>
-  </section>`;
+  </section>
 
-  if(C.invite.show) h+=`
+  <!-- ===== ПОЭТОМУ + КАЛЕНДАРЬ ===== -->
   <section class="fade">
-    <div class="h" style="font-size:56px;margin-bottom:22px">${esc(C.invite.title)}</div>
-    ${paras(C.invite.text)}
-    ${calendar(C.invite.date)}
-    <div class="hats emoji" style="display:flex"><image style="height:260px; width:100%" src="https://images.greetingsisland.com/images/cards/birthday/previews/hats-off-21982.jpeg?auto=format,compress" alt="" /></div>
-  </section>`;
+    <div class="h" style="font-size:56px;margin-bottom:22px">Поэтому</div>
+    <p class="t">Мы с огромной радостью приглашаем вас разделить с нами особенный день — первый день рождения нашего сына!</p>
 
-  if(C.place.show){ const p=C.place; h+=`
+    <div class="date-big">21.11.2026</div>
+    <div class="cal">
+      <div class="cal-row"><div>ПН</div><div>ВТ</div><div>СР</div><div>ЧТ</div><div>ПТ</div><div>СБ</div><div>ВС</div></div>
+      <div class="cal-line"></div>
+      <div class="cal-row">
+        <div class="cal-day"><span>16</span></div>
+        <div class="cal-day"><span>17</span></div>
+        <div class="cal-day"><span>18</span></div>
+        <div class="cal-day"><span>19</span></div>
+        <div class="cal-day"><span>20</span></div>
+        <div class="cal-day on"><span>21</span></div>
+        <div class="cal-day"><span>22</span></div>
+      </div>
+    </div>
+
+    <div class="hats emoji" style="display:flex"><img style="height:260px; width:100%" src="images/caps.png" alt=""></div>
+  </section>
+
+  <!-- ===== МЕСТО ВСТРЕЧИ ===== -->
   <section class="gingham fade">
     <div class="cloud">
-      ${star('right:8%;top:96px;transform:rotate(15deg)')}${star('left:8%;top:290px;width:34px;height:34px')}${star('right:10%;bottom:80px;width:30px;height:30px')}
-      <p class="lbl">${esc(p.themeLabel)}</p><div class="h">${esc(p.theme)}</div>
-      <p class="lbl">${esc(p.placeLabel)}</p><div class="h fit" style="font-size:44px">${esc(p.placeName)}</div>
-      <p class="lbl" style="margin-bottom:20px">${esc(p.address)}</p>
-      <a class="oval" href="${esc(p.mapUrl)}" target="_blank" rel="noopener">${esc(p.mapButton)}</a>
-      <p class="lbl">${esc(p.timeLabel)}</p><p class="big">${esc(p.time)}</p>
+      <i class="star" style="right:8%;top:96px;transform:rotate(15deg)"></i>
+      <i class="star" style="left:8%;top:290px;width:34px;height:34px"></i>
+      <i class="star" style="right:10%;bottom:80px;width:30px;height:30px"></i>
+      <p class="lbl">вечеринка в стиле</p>
+      <div class="h">цирк</div>
+      <p class="lbl">место встречи:</p>
+      <div class="h fit" style="font-size:44px">LOFT MONBINI</div>
+      <p class="lbl" style="margin-bottom:20px">пр-кт Лихачева, д.20</p>
+      <a class="oval" href="https://yandex.ru/maps/org/29893557636" target="_blank" rel="noopener">открыть карту</a>
+      <p class="lbl">сбор гостей в</p>
+      <p class="big">16.00</p>
     </div>
-  </section>`;}
+  </section>
 
-  if(C.dresscode.show){ const d=C.dresscode; h+=`
+  <!-- ===== ДРЕСС-КОД ===== -->
   <section class="dress fade" style="padding-top:44px">
     <div class="h">дресс-<span class="strike">кот</span></div>
-    <div class="h" style="margin:4px 0 26px"><svg class="wave" viewBox="0 0 120 40"><path d="M5 25 Q17 0 30 22 T55 22 T80 22 T105 18" stroke="#6cae3c" stroke-width="9" fill="none" stroke-linecap="round"/></svg>код</div>
-    ${paras(d.text)}
+    <div class="h" style="margin:4px 0 26px">
+      <svg class="wave" viewBox="0 0 120 40"><path d="M5 25 Q17 0 30 22 T55 22 T80 22 T105 18" stroke="#6cae3c" stroke-width="9" fill="none" stroke-linecap="round"/></svg>код
+    </div>
+    <p class="t">Достаём из гардероба всё самое цветное, весёлое и праздничное и отправляемся прямиком на цирковое представление</p>
   </section>
-  ${slider(d.images.map((s,i)=>img(s,'Картинка образа '+(i+1)+'\n(формат 2:3)')), d.slideSeconds,'outfit fade')}`;}
 
-  if(C.gifts.show){ const g=C.gifts; h+=`
-  <section class="fade" style="padding:0">${bunting()}</section>
+  <!-- Листалка образов -->
+  <div class="slider outfit fade" data-slider data-interval="3">
+    <div class="slides">
+      <div><div class="ph">Картинка образа 1<br>(формат 2:3)</div></div>
+      <div><div class="ph">Картинка образа 2<br>(формат 2:3)</div></div>
+      <div><div class="ph">Картинка образа 3<br>(формат 2:3)</div></div>
+      <div><div class="ph">Картинка образа 4<br>(формат 2:3)</div></div>
+      <div><div class="ph">Картинка образа 5<br>(формат 2:3)</div></div>
+    </div>
+  </div>
+
+  <!-- ===== ПОДАРКИ ===== -->
+  <section class="fade" style="padding:0">
+    <svg class="bunting" viewBox="0 0 560 110" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 8 Q280 60 560 8" stroke="#3b3a36" stroke-width="2" fill="none"/>
+      <path d="M4 10 L76 14 L42 88 Z" fill="#f6a011"/>
+      <path d="M84 16 L156 20 L122 94 Z" fill="#2f5e9e"/>
+      <path d="M164 22 L236 26 L202 100 Z" fill="#e2412a"/>
+      <path d="M244 28 L316 32 L282 106 Z" fill="#f6bb09"/>
+      <path d="M324 32 L396 36 L362 110 Z" fill="#a31c2d"/>
+      <path d="M404 32 L476 36 L442 110 Z" fill="#f6a011"/>
+      <path d="M484 28 L556 32 L522 106 Z" fill="#2f5e9e"/>
+    </svg>
+  </section>
   <section class="fade" style="padding-top:0">
     <div class="frame" style="text-align:center">
-      ${star('left:12%;top:30px;width:34px;height:34px')}${star('left:8%;bottom:80px')}${star('right:8%;bottom:90px;width:28px;height:28px')}
+      <i class="star" style="left:12%;top:30px;width:34px;height:34px"></i>
+      <i class="star" style="left:8%;bottom:80px"></i>
+      <i class="star" style="right:8%;bottom:90px;width:28px;height:28px"></i>
       <div class="emoji" style="font-size:44px">🥁</div>
-      <p class="t" style="margin-top:18px">${esc(g.question)}</p>
-      <div class="h">${esc(g.title)}</div>
-      ${paras(g.text)}
-      <a class="oval" href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.button)}</a>
+      <p class="t" style="margin-top:18px">ну, естественно, что дарить?</p>
+      <div class="h">подарки</div>
+      <p class="t">чтобы немного облегчить вам муки выбора, мы собрали вишлист Джафара с подарками, он точно будет рад</p>
+      <p class="t">вы можете выбрать что-нибудь из списка и забронировать подарок, чтобы он не повторился</p>
+      <a class="oval" href="https://ohmywishes.com/users/jafar" target="_blank" rel="noopener">Вишлист</a>
     </div>
-  </section>`;}
-
-  if(C.growth.show){ const g=C.growth; h+=`
-  <section class="fade">
-    <div class="h" style="font-size:52px;text-align:left">${esc(g.title.split(' ').slice(0,2).join(' '))} <span class="emoji" style="font-size:44px">🦆</span></div>
-    <div class="h" style="font-size:52px;text-align:right;padding-right:30px;margin-bottom:24px">${esc(g.title.split(' ').slice(2).join(' '))}</div>
-    ${paras(g.text)}
   </section>
-  ${slider(g.photos.map((p,i)=>`<div class="month">${star('left:10%;top:60%;width:30px;height:30px')}${star('right:10%;top:12%;width:30px;height:30px')}
-      <div class="oval-photo">${img(p.photo,'Фото '+(i+1))}</div><p>${esc(p.caption)}</p></div>`), g.slideSeconds,'fade')}`;}
 
-  if(C.bye.show) h+=`
+  <!-- ===== И САМОЕ МИЛОЕ ===== -->
+  <section class="fade">
+    <div class="h" style="font-size:52px;text-align:left">и самое <span class="emoji" style="font-size:44px">🦆</span></div>
+    <div class="h" style="font-size:52px;text-align:right;padding-right:30px;margin-bottom:24px">милое</div>
+    <p class="t">посмотрите как Джафар вырос и менялся весь этот год!</p>
+    <p class="t">смотрите внимательно ведь он очень старался))</p>
+  </section>
+
+  <!-- Листалка фото по месяцам -->
+  <div class="slider fade" data-slider data-interval="3">
+    <div class="slides">
+      <div class="month">
+        <i class="star" style="left:10%;top:60%;width:30px;height:30px"></i>
+        <i class="star" style="right:10%;top:12%;width:30px;height:30px"></i>
+        <div class="oval-photo"><div class="ph">Фото 1</div></div>
+        <p>1 месяц</p>
+      </div>
+      <div class="month">
+        <i class="star" style="left:10%;top:60%;width:30px;height:30px"></i>
+        <i class="star" style="right:10%;top:12%;width:30px;height:30px"></i>
+        <div class="oval-photo"><div class="ph">Фото 2</div></div>
+        <p>2 месяца</p>
+      </div>
+      <div class="month">
+        <i class="star" style="left:10%;top:60%;width:30px;height:30px"></i>
+        <i class="star" style="right:10%;top:12%;width:30px;height:30px"></i>
+        <div class="oval-photo"><div class="ph">Фото 3</div></div>
+        <p>3 месяца</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ФИНАЛ ===== -->
   <section class="gingham fade" style="margin-top:20px">
     <div class="cloud">
-      ${star('left:8%;top:110px;width:32px;height:32px')}${star('right:12%;top:70px;width:26px;height:26px')}
-      <div class="h">${esc(C.bye.title.replace('-','-\n')).replace('\n','<br>')}</div>
+      <i class="star" style="left:8%;top:110px;width:32px;height:32px"></i>
+      <i class="star" style="right:12%;top:70px;width:26px;height:26px"></i>
+      <div class="h">пока-пока</div>
       <div class="emoji" style="font-size:72px;margin-top:22px">🐘🎂🐊</div>
-      <p class="sig">${esc(C.bye.signature)}</p>
+      <p class="sig">ваши Джафар</p>
     </div>
-  </section>`;
+  </section>
 
-  document.getElementById('page').innerHTML = h;
+</div>
 
-  // уменьшаем длинные заголовки, чтобы помещались в одну строку
-  function fit(){ document.querySelectorAll('.fit').forEach(el=>{
-    el.style.whiteSpace='nowrap'; el.style.fontSize=''; let fs=parseFloat(getComputedStyle(el).fontSize);
-    const max=el.parentElement.clientWidth-24; el.style.width='max-content'; el.style.margin='0 auto';
-    while(el.offsetWidth>max && fs>18){ fs-=2; el.style.fontSize=fs+'px'; }
-    el.style.width=''; el.style.margin=''; }); }
-  fit(); addEventListener('resize',fit); document.fonts && document.fonts.ready.then(fit);
+<script>
+  // Плавное появление блоков при прокрутке
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: 0.08 });
+  document.querySelectorAll('.fade').forEach(el => io.observe(el));
 
-  // плавное появление блоков при прокрутке (как в оригинале)
-  const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.08});
-  document.querySelectorAll('.fade').forEach(el=>io.observe(el));
-  if(location.hash==='#static') document.querySelectorAll('.fade').forEach(el=>el.classList.add('in'));
-})();
+  // Уменьшение длинных заголовков, чтобы помещались в одну строку
+  function fit() {
+    document.querySelectorAll('.fit').forEach(el => {
+      el.style.whiteSpace = 'nowrap';
+      el.style.fontSize = '';
+      let fs = parseFloat(getComputedStyle(el).fontSize);
+      const max = el.parentElement.clientWidth - 24;
+      el.style.width = 'max-content';
+      el.style.margin = '0 auto';
+      while (el.offsetWidth > max && fs > 18) { fs -= 2; el.style.fontSize = fs + 'px'; }
+      el.style.width = '';
+      el.style.margin = '';
+    });
+  }
+  fit();
+  addEventListener('resize', fit);
+  if (document.fonts) document.fonts.ready.then(fit);
+
+  // Автоматическая листалка для всех слайдеров
+  document.querySelectorAll('[data-slider]').forEach(slider => {
+    const slides = slider.querySelector('.slides');
+    const count = slides.children.length;
+    if (count < 2) return;
+    const seconds = parseInt(slider.dataset.interval || '3', 10);
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % count;
+      slides.style.transform = `translateX(-${i * 100}%)`;
+    }, seconds * 1000);
+  });
 </script>
 </body>
 </html>
